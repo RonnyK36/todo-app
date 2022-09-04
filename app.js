@@ -4,6 +4,10 @@ const todoList = document.getElementById('todos')
 
 form.addEventListener('submit', (event) => {
     event.preventDefault()
+    addTodo()
+})
+
+function addTodo() {
     const todo = input.value
 
     if (todo) {
@@ -13,5 +17,13 @@ form.addEventListener('submit', (event) => {
         todoList.appendChild(todoEl)
 
         input.value = ''
+
+        todoEl.addEventListener('click', () => {
+            todoEl.classList.toggle('completed')
+        })
+        todoEl.addEventListener('contextmenu', (event) => {
+            event.preventDefault()
+            todoEl.remove()
+        })
     }
-})
+}
