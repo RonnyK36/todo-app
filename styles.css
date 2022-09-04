@@ -10,7 +10,39 @@ body {
 
 h1 {
     color: rgb(199, 162, 236);
-    font-size: 10rem;
+    font-size: 5rem;
     text-align: center;
     opacity: 0.6;
+}
+
+form {
+    margin: auto;
+    max-width: 100%;
+    width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.input {
+    width: 100%;
+    padding: 1rem 2rem;
+    display: block;
+    font-size: 2rem;
+}
+
+.input::placeholder {
+    color: #b5b5b5b5;
+}
+
+.todos {
+    background-color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.todos li {
+    border-top: 1px solid #e5e5e5e5;
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+    font-weight: 500;
 }
